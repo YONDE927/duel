@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>GAMER POD</title>
+  </head>
+  <body>
+    <h1>GAMER POD ~xianty dime kaien~</h1>
+
+    <div class="database">
+      <h2>対人記録</h2>
+      {% for data in lists %}
+      <article class="kiji">
+        <h3>{{data.he}}から{{data.she}}へ</h3>
+        <p>{{data.contract}}</p>
+        <form class="" action="/deleted" method="post">
+          <input type="hidden" name="id" value={{data.id}}>
+          <input type="submit" name="delete" value="delete">
+        </form>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="add_form">
+      <h2>メモ場</h2>
+      <form class="" action="/added" method="post">
+        <p>あなたは誰ですか？</p>
+        <input type="text" name="he">
+        <p>誰に対する約束ですか？</p>
+        <input type="text" name="she">
+        <p>約束事を</p>
+        <textarea name="contract" rows="8" cols="80"></textarea><br>
+        <input type="submit" name="submit" value="save">
+      </form>
+    </div>
+  </body>
+</html>

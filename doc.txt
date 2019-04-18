@@ -1,0 +1,10 @@
+動かすためには
+flask sqlite3 が必要だよ
+
+手順
+１：すぐに立ち上げるには仮想環境を起動してください。
+    $ source myvenv/bin/activate (macの人)
+    $ myvenv¥Scripts¥activate (windowsの人)
+
+２：test.pyを起動するだけ
+    $ python test.py
