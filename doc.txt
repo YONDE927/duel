@@ -8,3 +8,5 @@ flask sqlite3 が必要だよ
 
 ２：test.pyを起動するだけ
     $ python test.py
+
+割と自作
